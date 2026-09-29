@@ -1,0 +1,24 @@
+Atue como um especialista em N8N.
+Crie uma automação para captura, qualificação e sincronização de leads B2B recebidos via formulário.
+
+Público:
+Equipe Comercial e de Pré-vendas (SDRs).
+
+Ferramentas envolvidas:
+Webhook (Google Forms / Typeform), Google Sheets, Slack e Gmail.
+
+Fluxo:
+1. Receber os dados da requisição via nó Webhook.
+2. Validar e sanitizar os dados (verificar campos obrigatórios: nome, e-mail corporativo e empresa).
+3. Verificar duplicidade no Google Sheets por meio do e-mail informado.
+4. Inserir ou atualizar os dados do lead na planilha com carimbo de data/hora e status.
+5. Classificar o lead e enviar alerta imediato em canal específico do Slack (destacando leads prioritários).
+6. Enviar e-mail de boas-vindas e confirmação ao lead via Gmail.
+
+Regras:
+- Descartar requisições com e-mails inválidos ou dados obrigatórios ausentes.
+- Tratar duplicidade sem sobrescrever dados históricos indevidamente.
+- Definir fallback/error handling para falhas de envio nas APIs externas.
+
+Explique quais nós do N8N devem ser utilizados e a lógica de funcionamento do workflow.
+
